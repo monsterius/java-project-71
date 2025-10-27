@@ -1,0 +1,20 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Gradle build directories
+/app/.gradle/
+/app/build/
+
+# Generated files
+*.iml
+.idea/
+.classpath
+.project
+.settings/
+
+# Local environment files (if applicable)
+gradle.properties # If it contains sensitive information or local configurations
+local.properties
+/notes
