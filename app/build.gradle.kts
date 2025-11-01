@@ -1,5 +1,6 @@
 plugins {
     application
+    id("io.freefair.lombok") version "8.4"
 }
 
 group = "hexlet.code"
@@ -15,6 +16,7 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     implementation("info.picocli:picocli:4.7.7")
     annotationProcessor("info.picocli:picocli-codegen:4.7.7")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.0.1")
 }
 
 application {
