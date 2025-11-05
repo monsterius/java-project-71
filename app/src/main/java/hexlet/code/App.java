@@ -20,12 +20,10 @@ class App implements Callable<Integer> {
     @Override
     public Integer call() throws IOException {
         System.out.println("Hello, World!");
-        // Тестовый кусок
         var map1 = Parser.parse(filepath1);
         var map2 = Parser.parse(filepath2);
         var listOfMaps = FileComparator.compare(map1, map2);
         System.out.println(FileComparator.display(listOfMaps));
-        // End
         return 0;
     }
 
