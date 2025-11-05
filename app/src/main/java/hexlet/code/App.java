@@ -4,6 +4,7 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
+import java.io.IOException;
 import java.util.concurrent.Callable;
 
 @Command(name = "gendiff", mixinStandardHelpOptions = true, version = "gendiff 1.0",
@@ -17,8 +18,14 @@ class App implements Callable<Integer> {
             description = "output format [default: ${DEFAULT-VALUE}]")
     private String format;
     @Override
-    public Integer call() {
+    public Integer call() throws IOException {
         System.out.println("Hello, World!");
+        // Тестовый кусок
+        var map1 = Parser.parse(filepath1);
+        var map2 = Parser.parse(filepath2);
+        var listOfMaps = FileComparator.compare(map1, map2);
+        System.out.println(FileComparator.display(listOfMaps));
+        // End
         return 0;
     }
 

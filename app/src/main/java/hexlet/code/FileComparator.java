@@ -23,4 +23,13 @@ public class FileComparator {
         resMap.putAll(map2);
         return resMap;
     }
+    // Тестовый кусок?
+    public static String display(Map<String, Object> map) {
+        String result = "{";
+        for (var key : map.keySet()) {
+            result += "\n" +key + ": " + map.get(key);
+        }
+        result += "\n}";
+        return result;
+    }
 }
